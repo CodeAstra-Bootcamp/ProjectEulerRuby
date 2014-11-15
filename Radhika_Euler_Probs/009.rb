@@ -8,11 +8,10 @@
 
 (1...998).each do |c|
   (1...c).each do |b|
-    (1...b).each do |a|
-      sum=a+b+c
-      if sum==1000 && a**2+b**2==c**2
-        puts a*b*c
-      end
+    a=1000-b-c
+    if a**2+b**2==c**2
+      puts a*b*c
+      Process.exit(0)
     end
   end
 end
