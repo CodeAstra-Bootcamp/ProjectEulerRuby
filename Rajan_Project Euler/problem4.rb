@@ -6,7 +6,7 @@
 
 ans = 1
 
-(1...999).each do |i|
+(100...999).each do |i|
 	(i...999).each do |j|
 		value = i*j
 		if (value.to_s == value.to_s.reverse)
@@ -19,6 +19,6 @@ puts ans
 
 # OUTPUT
 # 906609
-# real	0m0.308s
-# user	0m0.297s
-# sys	0m0.008s
+# real	0m0.268s
+# user	0m0.255s
+# sys	0m0.010s
