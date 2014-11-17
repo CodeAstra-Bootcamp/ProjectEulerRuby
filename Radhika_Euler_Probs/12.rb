@@ -15,22 +15,15 @@
 # We can see that 28 is the first triangle number to have over five divisors.
 
 # What is the value of the first triangle number to have over five hundred divisors?
-
 require_relative "util"
 
-puts listOfFactors(500)
-
-
-# triangleNumberArray = []
-# (700..1500).each do |i|
-#   triangleNumberArray.push(i*(i+1)/2)
-# end
-# # puts triangleNumberArray
-# x=[]
-# triangleNumberArray.each do |e|
-#   x = listOfFactors(e)
-#   if x.length >=500
-#     puts e
-#     break 
-#   end
-# end
+i=1
+while true
+  n=i*(i+1)/2
+  if numbOfDivisors(n) >=500
+    puts e
+    Process.exit(0)
+  else
+    i += 1
+  end
+end
