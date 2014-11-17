@@ -26,3 +26,6 @@
 # direction (up, down, left, right, or diagonally) in the 20×20 grid?
 
 require_relative "util"
+N=28
+puts numbOfDivisors(N)
+puts listOfFactors(N)

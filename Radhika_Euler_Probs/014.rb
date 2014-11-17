@@ -12,3 +12,27 @@
 # Which starting number, under one million, produces the longest chain?
 
 # NOTE: Once the chain starts the terms are allowed to go above one million.
+
+def nextNumbCount(n)
+  count = 1
+  while(n!=1)
+    if(n%2==0)
+      n /=2
+    else
+      n = 3*n+1
+    end
+    count += 1
+  end
+  return count
+end
+
+maxCountNumb=0
+maxCount=0
+1000000.downto(1).each do |i|
+  c = nextNumbCount(i)
+  if c >= maxCount
+    maxCountNumb=i
+    maxCount=c
+  end
+end
+puts maxCountNumb
