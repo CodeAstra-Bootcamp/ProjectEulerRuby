@@ -54,3 +54,8 @@ end
 def lcm(m,n)
   return (m*n)/gcd(m,n)  
 end
+
+def factorial(n)
+  return (1..n).each.reduce(:*)  
+end
+
